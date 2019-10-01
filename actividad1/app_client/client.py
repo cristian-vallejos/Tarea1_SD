@@ -1,12 +1,14 @@
 import socket
 import datetime
 
+print('CLIENTE INICIADO')
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 5000)) # Esto debería depender de la IP del server.
+client.connect(('127.0.0.1', 5000))  # Esto debería depender de la IP del server.
 file = open("respuestas.txt", "a+")
 
 while True:
     message = input("Ingrese el mensaje a enviar (pulse ENTER para cerrar el cliente): ")
+    print('MSG INPUT')
     if message == "":
         break
     else:
