@@ -1,0 +1,11 @@
+A continuación, se define la ubicación de los archivos de salida para cada contenedor:
+
+    app_headnode:
+        Contiene los archivos 'heartbeat_server.txt' y 'registro_server.txt'
+
+    app_datanode:
+        El archivo 'data.txt', correspondiente a cada datanode, se encuentra
+        en el directorio datanodeX, donde la X representa el número del datanode.
+
+    app_client:
+        Contiene el archivo 'registro_cliente.txt'

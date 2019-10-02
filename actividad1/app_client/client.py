@@ -1,13 +1,13 @@
 import socket
 import datetime, random
-from time import sleep
 
 messages_dict = ["Hola", "Sistemas", "Mensaje de prueba", "Funciona!", "Saludos", "Distribuidos",
-                "Hola", "Sistemas", "Mensaje de prueba", "Funciona!", "Saludos", "Distribuidos", "exit"]
+                "Bienvenido", "Mensaje hacia el servidor", "Mensaje de prueba", "Enviado", "Adiós",
+                "INF343", "Sockets", "Enviando mensaje al headnode", "Funciona?", "Ayuda", "exit"]
 
 client_file_name = 'respuestas.txt'
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 5000))  # Esto debería depender de la IP del server.
+client.connect(("server", 5000))  # Esto debería depender de la IP del server.
 
 while True:
     message = messages_dict[random.randint(0, len(messages_dict)-1)]

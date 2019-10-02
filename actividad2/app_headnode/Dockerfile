@@ -9,6 +9,6 @@ RUN apt-get update \
     && apt-get -y install vim \
     && apt-get -y install sqlite
 
-ADD datanode.py /app_datanode/
+ADD headnode.py /app_headnode/
 
-WORKDIR /app_datanode/
+WORKDIR /app_headnode/
