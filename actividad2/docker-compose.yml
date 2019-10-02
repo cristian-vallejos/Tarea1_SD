@@ -14,7 +14,7 @@ services:
         volumes:
           - ./app_datanode:/app_datanode
         command: python datanode.py
-#       network_mode: host
+        network_mode: host
         depends_on:
           - server
     client:
