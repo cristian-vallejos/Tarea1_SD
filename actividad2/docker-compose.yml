@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    server:
+        build: app_server/
+        volumes:
+          - ./app_server:/app_server
+        command: python headnode.py
+        image: ubuntu
+        ports:
+            - "5000:5000"
+    datanode:
+        build: app_datanode/
+        volumes:
+          - ./app_datanode:/app_datanode
+        command: python datanode.py
+#       network_mode: host
+        depends_on:
+          - server
+    client:
+        build: app_client/
+        volumes:
+          - ./app_client:/app_client
+        command: python client.py
+        network_mode: host
+        depends_on:
+          - datanode
