@@ -24,6 +24,7 @@ def threaded(c):
                 file.write(date_now.strftime("%Y-%m-%d %H:%M:%S") + " -> " + data[1] + "\n")
         elif data[0] == "close":
             del connections[-1]
+            print("Se ha perdido la conexión con el cliente.\n")
             break
     c.close()
 
