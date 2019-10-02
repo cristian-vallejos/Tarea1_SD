@@ -1,0 +1,4 @@
+A continuación, se define la ubicación de los archivos de salida para cada contenedor:
+
+    1) log.txt -> Se encuentra en la carpeta ./app_server
+    2) respuestas.txt -> Se encuentra en la carpeta ./app_client
