@@ -21,8 +21,3 @@ while True:
         conn.send("El servidor ha recibido satisfactoriamente su mensaje.\n".encode())
     conn.close()
     print('Se ha perdido la conexión con el cliente.\n')
-    file = open(server_file_name, 'r')
-    print('LOG FILE:')
-    for line in file:
-        print(line)
-    file.close()

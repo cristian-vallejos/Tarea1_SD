@@ -3,12 +3,16 @@ version: '3'
 services:
     server:
         build: app_server/
+        volumes:
+          - ./app_server:/app_server
         command: python server.py
         image: ubuntu
         ports:
             - "5000:5000"
     client:
         build: app_client/
+        volumes:
+          - ./app_client:/app_client
         command: python client.py
 #        stdin_open: true
 #        tty: true
