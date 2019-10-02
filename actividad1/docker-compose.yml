@@ -14,8 +14,6 @@ services:
         volumes:
           - ./app_client:/app_client
         command: python client.py
-#        stdin_open: true
-#        tty: true
         network_mode: host
         depends_on:
           - server
