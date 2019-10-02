@@ -14,4 +14,6 @@ while True:
         client.send(answer)
         with open("data" + headnode_message[0] + ".txt", "a+") as file:
             file.write(date_now.strftime("%Y-%m-%d %H:%M:%S") + " -> " + headnode_message[1] + "\n")
+    #elif headnode_message[0] == "close":
+        #break;
 client.close()

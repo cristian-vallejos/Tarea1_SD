@@ -17,12 +17,14 @@ def threaded(c):
             node = random.randint(0, 2)
             connection = connections[node]
             connection.send((str(node) + " | " + data[1]).encode())
-        if data[0] == 'datanode':
+        elif data[0] == 'datanode':
             date_now = datetime.datetime.now()
-            connections[3].send(("Su mensaje ha sido registrado en el datanode " + str(data[1].split(" ")[2]) + ".").encode())
+            connections[3].send(("Su mensaje '" + data[1].split("'")[1] +"' ha sido registrado en el datanode " + str(data[1].split(" ")[2]) + ".").encode())
             with open("registro_server.txt", "a+") as file:
                 file.write(date_now.strftime("%Y-%m-%d %H:%M:%S") + " -> " + data[1] + "\n")
-        print(connections)
+        elif data[0] == "close":
+            del connections[-1]
+            break
     c.close()
 
 connections = []
