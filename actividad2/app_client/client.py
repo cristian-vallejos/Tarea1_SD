@@ -7,6 +7,7 @@ client.connect(("127.0.0.1", 5000)) # Esto debería depender de la IP del server
 while True:
     message = input("Ingrese el mensaje a enviar (pulse ENTER para cerrar el cliente): ")
     if message == "":
+        client.send(("close").encode())
         break
     else:
         client.send(("client | " + message).encode())
