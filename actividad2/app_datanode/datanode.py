@@ -9,7 +9,7 @@ while True:
     headnode_message = data.decode().split(" | ")
     if (headnode_message[0] == "0") or (headnode_message[0] == "1") or (headnode_message[0] == "2"):
         try:
-            os.mkdir('datanode' + str(headnode_message[0]))
+            os.mkdir('datanode' + headnode_message[0])
         except FileExistsError:
             print("Directory " , 'datanode' + str(headnode_message[0]) ,  " already exists")
 

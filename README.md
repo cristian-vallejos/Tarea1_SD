@@ -1,6 +1,6 @@
 # Tarea1_SD
 
-Desarrollada por:
+Desarrollada en Python 3.7.3 por:
 
     Yerko Cuzmar Ortiz, 201473594-4
     Cristian Vallejos Pérez, 201473551-0

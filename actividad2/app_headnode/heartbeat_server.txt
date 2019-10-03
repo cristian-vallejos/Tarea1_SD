@@ -1,3 +1,0 @@
-2019-10-02 23:12:30 -> El datanode1 se encuentra inactivo.
-2019-10-02 23:12:30 -> El datanode2 se encuentra inactivo.
-2019-10-02 23:12:30 -> El datanode3 se encuentra inactivo.
